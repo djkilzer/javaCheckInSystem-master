@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="570.0" prefWidth="785.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controlHome">
+   <children>
+      <AnchorPane layoutX="68.0" layoutY="141.0" prefHeight="390.0" prefWidth="650.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;">
+         <children>
+            <GridPane layoutX="50.0" layoutY="22.0" prefHeight="347.0" prefWidth="550.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="296.0" minHeight="0.0" prefHeight="210.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="235.0" minHeight="6.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="plansButton" mnemonicParsing="false" onAction="#selectedPLANS" text="START PLANNING" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="clientButton" mnemonicParsing="false" onAction="#selectedCLIENT" text="CLIENT INFORMATION" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="trainerButton" mnemonicParsing="false" onAction="#selectedTRAINER" text="TRAINER INFORMATION" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <ImageView fx:id="trainerPic" fitHeight="175.0" fitWidth="150.0" onDragDetected="#selectedTRAINER" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@trainer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="clientPic" fitHeight="175.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@clients.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="plansPic" fitHeight="175.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@plans.png" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In the workout plan area you can create a custom workout plan that is tailor to your specific needs. " wrappingWidth="127.388671875" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In the clients area you can add, delete and alter client data. " wrappingWidth="127.388671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In the trainers area you can add, delete and alter trainer data" wrappingWidth="127.388671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="378.0" layoutY="32.0" prefHeight="85.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME: " />
+            <Text layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD: " />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="13.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="LOGIN" />
+            <TextField layoutX="86.0" layoutY="13.0" />
+            <TextField layoutX="86.0" layoutY="42.0" />
+            <Text fill="RED" layoutX="266.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="32.0" prefHeight="85.0" prefWidth="281.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;">
+         <children>
+            <Text layoutX="19.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UH GYM Project">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="164.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Benjamin Salazar" />
+      <Text layoutX="548.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="David Kilzer" />
+      <Text layoutX="314.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="University of Houston © 2017" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+   </children>
+</AnchorPane>
